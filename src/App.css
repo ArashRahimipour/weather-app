@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+.app{
+    background-image: url('https://images.alphacoders.com/476/476278.jpg');
+    background-size: cover;
+    background-position:bottom;
+    transition: 0.4s ease-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-warm{
+    background-image: url('./pics/fall.jpeg');
+    background-position: bottom;
+    transition: 0.4s ease-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+main{
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+    padding: 25px;
+}
+
+.search-box{
+    width: 50%;
+    margin: 0 350px 75px;
+}
+
+.search-box .search-bar{
+    display: block;
+    width: 100%;
+    padding: 15px;
+
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+
+    background-color: #ccc;
+    border-radius: 0 0 16px 16px;
+    margin-top: -24px;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+    color: #313131;
+    font-size: 20px;
+
+    transition:0.4s ease;
+    cursor: pointer;
+}
+
+.search-box .search-bar:focus{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.location{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 3px 3px #333;
+}
+
+.date{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 2px 2px #333;
+}
+
+.weather-box{
+    text-align: center;
+}
+
+ .temp{
+    position: relative;
+    display: inline-block;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 15px 5px;
+    color: #fff;
+    font-size: 100px;
+    font-weight: 900;
+    text-shadow: 3px 6px #333;
+    text-align: center;
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+    width: 250px;
+}
+
+.weather{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    text-overflow: 3px 6px #333;
+}
+
+
+
+@media screen and (max-width:1024px){
+    .search-box{
+        position: relative;
+    }
+    
+    .search-bar{
+   position: absolute;
+   right: 120px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 950px){
+    .search-box{
+        position: relative;
+    }
+    
+    .search-bar{
+   position: absolute;
+   right: 160px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width:720px){
+    .search-box{
+        position: relative;
+    }
+    
+    .search-bar{
+   position: absolute;
+   right: 258px;
+  }
+}
+
+@media screen and (max-width:280px){
+    .search-box{
+        position: relative;
+    }
+    
+    .search-bar{
+   position: absolute;
+   right: 285px;
   }
 }
